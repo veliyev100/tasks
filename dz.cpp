@@ -3,9 +3,8 @@
 #include <algorithm>
 
 template <typename T>
-void DuplicateAndReverse(std::vector<T>& v) {
-    size_t initial_size = v.size();
-    v.reserve(initial_size * 2); // Зарезервируем место для удвоенного размера
+void Duplicate(std::vector<T>& v) {
+    v.reserve(initial_size * 2);
 
     for(auto it = v.begin(); it != v.begin() + initial_size; ++it) {
         v.push_back(*it);
@@ -16,7 +15,7 @@ void DuplicateAndReverse(std::vector<T>& v) {
 int main() {
     std::vector<int> v = {1, 2, 3, 4, 5};
 
-    DuplicateAndReverse(v);
+    Duplicate(v);
 
     for (auto item : v) {
         std::cout << item << " ";
